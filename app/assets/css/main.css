@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+	font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+@media print {
+	.no-print {
+		display: none !important;
+	}
+
+	.print-break-before {
+		break-before: page;
+		page-break-before: always;
+	}
+
+	.print-break-after {
+		break-after: page;
+		page-break-after: always;
+	}
+
+	.print-avoid-break {
+		break-inside: avoid;
+		page-break-inside: avoid;
+	}
+
+	.no-print { display: none !important; }
+
+	body {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+
+	/* Remove sticky offsets etc. */
+	.print\:p-0 {
+		padding: 0 !important;
+	}
+}
