@@ -1,0 +1,10 @@
+version: 1.0
+runtime: docker
+build:
+  commands:
+    build:
+      - docker build -t myt-client .
+run:
+  command: node .output/server/index.mjs
+  network:
+    port: 3000
